@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div id="calculator">
+        <input id="result" type="text" readonly value="@ViewData["result"]" name="CalcString" />
+        @Html.Partial("CalcButtons")
+    </div>
+}
